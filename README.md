@@ -3,6 +3,5 @@ For the year **2022** : Decided to solve at least **2** DSA solutions a day usin
 
 [ Python - C - C++ - JS - Ruby - Rust ]
 
- > Start date: 2022 - 02 - 22 
- > 
-> Count down begins now ... 🤞
+ > - [X] Start date: **2022 - 02 - 22**  
+ 
