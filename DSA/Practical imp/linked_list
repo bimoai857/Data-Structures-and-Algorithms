@@ -1,0 +1,52 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+struct Node{
+    int data;
+    Node* link;
+   
+};
+
+class NodeClass{
+    
+    Node* head;
+   
+    public:
+    
+     NodeClass(){
+        head=NULL;
+    }
+
+   
+    void insert(int x){
+        Node* temp=(Node *)malloc(sizeof(Node));
+        temp->link=head;
+        temp->data=x;
+        head=temp;
+      }
+      
+    void print(){
+        Node* temp=head;
+   
+        while(temp!=NULL){
+            cout<<temp->data<<endl;
+            temp=temp->link;
+        }
+    }
+};
+
+int main() {
+   int number;
+   cout<<"Enter the number of nodes: ";
+   cin>>number;
+   NodeClass n1;
+   
+   for(int i=0;i<number;i++){
+       int a;
+       cout<<"Enter data: ";
+       cin>>a;
+       n1.insert(a);
+       n1.print();
+   }
+ return 0;
+}
