@@ -1,4 +1,5 @@
-// Online C++ compiler to run C++ program online
+// Inserting into a linked list.
+//We insert new node at the begining as inserting at the end comes with large overhead(Time complexity->O(n)).
 #include <iostream>
 using namespace std;
 struct Node{
