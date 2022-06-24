@@ -1,0 +1,5 @@
+g++ => compiler
+./a.out=> run
+
+gcc <c-program> => running c program
+
