@@ -1,0 +1,29 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class complex{
+    int realp,imgp;
+    public:
+    complex(){
+        
+    }
+    complex(int a,int b){
+        realp=a;
+        imgp=b;
+    }
+    void subs(complex c1,complex c2){
+        realp=c1.realp-c2.realp;
+        imgp=c1.imgp-c2.imgp;
+    }
+    void display(){
+        cout<<"The output is"<<realp<<'+'<<imgp<<'i';
+    }
+};
+
+int main() {
+    complex c1(3,5),c2(4,4),c3;
+    c3.subs(c1,c2);
+    
+    c3.display();
+    return 0;
+}

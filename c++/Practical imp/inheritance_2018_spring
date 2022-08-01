@@ -1,0 +1,92 @@
+
+#include <iostream>
+using namespace std;
+
+class university{
+    string u_name,u_address;
+    public:
+    university(){
+       cout<<"Object of class university created!!"<<endl;
+    }
+    void read1(){
+        cout<<"Enter the university name: ";
+        cin>>u_name;
+        cout<<"Enter the address of uni:";
+        cin>>u_address;
+    }
+    void display1(){
+        cout<<"The University: "<<u_name<<endl;
+         cout<<"The address: "<<u_address<<endl;
+    }
+};
+
+class affilated:virtual public university{
+    string a_name,a_address;
+    public:
+    affilated(){
+         cout<<"Object of class affiliated college created!!"<<endl;
+    }
+     void read2(){
+        cout<<"Enter the affilated college:";
+        cin>>a_name;
+        cout<<"Enter the address of uni:";
+        cin>>a_address;
+    }
+    void display2(){
+        cout<<"The University: "<<a_name<<endl;
+        cout<<"The address: "<<a_address<<endl;
+    }
+};
+
+class constitutent:virtual public university{
+    string c_name,c_address;
+    public:
+    constitutent(){
+        cout<<"The object of class constitutent created!!!"<<endl;
+    }
+    void read3(){
+        cout<<"Enter the name of constitutent: ";
+        cin>>c_name;
+        cout<<"The constitutent address: ";
+        cin>>c_address;
+    }
+    void display3(){
+        cout<<"The constitutent college: "<<c_name<<endl;
+        cout<<"The address: "<<c_address<<endl;
+    }
+};
+
+class student: public affilated, public constitutent{
+    string s_name,s_program;
+    public:
+    student()
+    {
+        cout<<"The student object created!!!"<<endl;
+    }
+     void read4(){
+         cout<<"Enter your name:";
+         cin>>s_name;
+        cout<<"The program: ";
+        cin>>s_program;
+    }
+    void display4(){
+        cout<<"The student: "<<s_name<<endl;
+        cout<<"The program:"<<s_program<<endl;
+    }
+};
+
+int main() {
+  student s;
+ 
+  s.read4();
+  s.read1();
+  s.read2();
+  s.read3();
+  
+  s.display4();
+  s.display1();
+  s.display2();
+  s.display3();
+ 
+  return 0;
+}

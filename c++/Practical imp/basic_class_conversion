@@ -1,0 +1,27 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class A{
+    int a;
+    public:
+    A(){
+        
+    }
+    A(int x){
+        a=x;
+    }
+    void display(){
+        cout<<"The value stored in this object: "<<a;
+    }
+};
+int main() {
+    int b;
+    A a;
+    cout<<"Enter a number you want to copy to an object: ";
+    cin>>b;
+    a=b;
+    a.display();
+
+    return 0;
+}

@@ -1,0 +1,59 @@
+
+#include <iostream>
+using namespace std;
+
+class base{
+    protected:
+    int a;
+    public:
+    int b;
+    void get_data(){
+        cout<<"Enter the value of a: ";
+        cin>>a;
+        cout<<"Enter the value of b: ";
+        cin>>b;
+      
+    }
+   
+    
+  
+};
+
+class A:public base{
+
+    public:
+    
+    
+    void sum(){
+        float s;
+      
+        s=a+b;
+        cout<<"The sum: "<<s<<endl;;
+    }
+    
+
+};
+
+class B:public A{
+
+    public:
+    void product(){
+        float s;
+      
+        s=a*b;
+        cout<<"The product: "<<s<<endl;;
+    }
+    
+      
+
+};
+
+
+
+int main() {
+  B b;
+  b.get_data();
+  b.sum();
+  b.product();
+  return 0;
+}

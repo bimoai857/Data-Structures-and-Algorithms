@@ -1,0 +1,49 @@
+// swapping the data between two different classes using friend function.
+
+#include <iostream>
+using namespace std;
+
+class Complex{
+    int* realP;
+    int* imgP;
+    int Sum;
+    int a;
+    public:
+    Complex(int x){
+        a=x;
+        realP=new int[x];
+        imgP=new int[x];
+    }
+    void insert(){
+        for(int i=0;i<a;i++){
+            cout<<"Enter real part: ";
+            cin>>realP[i];
+            cout<<"Enter imaginary part: ";
+            cin>>imgP[i];
+        }
+    }
+    
+    void sum(){
+        int real=0;
+        int img=0;
+        for(int i=0;i<a;i++){
+            real+=realP[i];
+            img+=imgP[i];
+        }
+        cout<<"The sum is "<<real<<'+'<<img<<'i';
+    }
+    
+};
+
+int main() {
+  
+    int n;
+    cout<<"Enter the number of complex number ";
+    cin>>n;
+    Complex c(n);
+    c.insert();
+    c.sum();
+    
+    return 0;
+}
+

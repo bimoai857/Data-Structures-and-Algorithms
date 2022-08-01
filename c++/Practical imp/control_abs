@@ -1,0 +1,13 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std ;
+int main ()
+{
+int a = 5 ;
+int power = 2 ;
+int result = pow ( a , power ) ;// pow(n,power) is the power function to calculate power
+cout << " Square of a = " << result << std::endl ;
+return 0 ;
+}
+

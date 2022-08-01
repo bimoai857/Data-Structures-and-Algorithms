@@ -1,0 +1,45 @@
+// swapping the data between two different classes using friend function.
+
+#include <iostream>
+using namespace std;
+class two;
+class one{
+    int a;
+    public:
+    void set_value(int b){
+        a=b;
+    }
+    friend void max(one o,two t);
+};
+class two{
+    int a;
+    public:
+    void set_value(int b){
+        a=b;
+    }
+    friend void max(one o,two t);
+};
+void max(one o,two t){
+    if(o.a>t.a){
+        cout<<"The maximum is "<<o.a;
+    }
+    else{
+        cout<<"The maximum is "<<t.a;
+    }
+}
+int main() {
+   int a,b;
+   
+   cout<<"Enter the first number: ";
+   cin>>a;
+   cout<<"Enter the second number: ";
+   cin>>b;
+   one ONE;
+   ONE.set_value(a);
+   two TWO;
+   TWO.set_value(b);
+   max(ONE,TWO);
+    
+    return 0;
+}
+

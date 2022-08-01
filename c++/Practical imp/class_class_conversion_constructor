@@ -1,0 +1,39 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class B{
+    int b;
+    public:
+    B(int x){
+        b=x;
+    }
+    int get_data(){
+        return b;
+    }
+    
+};
+
+class A{
+    int a;
+    public:
+  A(){
+      
+  }
+  A(B b){
+      a=b.get_data();
+  }
+  void display(){
+      cout<<"The value is: "<<a;
+  }
+};
+
+
+
+int main() {
+    
+    A z;
+    B y(56);
+    z=y;
+    z.display();
+    return 0;
+}

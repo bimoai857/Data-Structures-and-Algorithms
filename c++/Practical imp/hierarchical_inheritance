@@ -1,0 +1,95 @@
+
+#include <iostream>
+using namespace std;
+
+class base{
+    public:
+    int a;
+    protected:
+    int b;
+  
+};
+
+class A:public base{
+
+    public:
+    
+    void get_data(){
+        cout<<"Enter the value of a: ";
+        cin>>a;
+        cout<<"Enter the value of b: ";
+        cin>>b;
+      
+    }
+    void sum(){
+        float s;
+      
+        s=a+b;
+        cout<<"The sum: "<<s<<endl;;
+    }
+    
+
+};
+
+class B:protected base{
+
+     public:
+    
+    void get_data(){
+        cout<<"Enter the value of a: ";
+        cin>>a;
+        cout<<"Enter the value of b: ";
+        cin>>b;
+      
+    }
+    void product(){
+        float s;
+      
+        s=a*b;
+        cout<<"The product: "<<s<<endl;;
+    }
+    
+      
+
+};
+
+class C:private base{
+
+    public:
+    
+    void get_data(){
+        cout<<"Enter the value of a: ";
+        cin>>a;
+        cout<<"Enter the value of b: ";
+        cin>>b;
+      
+    }
+    void divide(){
+        float s;
+      
+        s=a/b;
+        cout<<"The output: "<<s<<endl;
+    }
+    
+};
+
+int main() {
+    A a;
+    B b;
+    C c;
+    
+    cout<<"SUM:"<<endl;
+    a.get_data();
+    a.sum();
+    
+    cout<<"PRODUCT:"<<endl;
+    b.get_data();
+    b.product();
+    
+    cout<<"DIVIDE:"<<endl;
+    c.get_data();
+    c.divide();
+    
+    
+    return 0;
+}

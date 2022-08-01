@@ -1,0 +1,35 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+#include <cstring>
+class A{
+    string conc;
+    public:
+    void concat(string& name,string& address){
+        conc=name+address;
+    }
+    void display(){
+        cout<<"The concanated string: "<<conc<<endl;
+    }
+};
+class B{
+    string Name,Address;
+    A a;
+    public:
+    B(string name,string address){
+        Name=name;
+        Address=address;
+      
+    }
+    void do_something(){
+        a.concat(Name,Address);
+        a.display();
+    }
+  
+};
+
+int main() {
+    B b("Bimochan ","Dharan");
+    b.do_something();
+    return 0;
+}
